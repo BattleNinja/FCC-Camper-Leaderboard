@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import CamperTable from "./table"
+import MDSpinner from "react-md-spinner";
 
 export default class App extends Component {
   constructor(){
@@ -38,11 +39,22 @@ export default class App extends Component {
   }
 
   render() {
+    if(!this.state.alltime.length&&!this.state.recent.length){
+        return(
+            <div className="spinner">
+                <MDSpinner  size={100}/>
+            </div>
+        );
+    }
+
+
     return (
-      <div className="text-center">
+      <div>
         <h1>Camper Board List</h1>
         <button onClick={()=>this.changstatus("recent")} className="btn btn-primary">30days</button>
         <button onClick={()=>this.changstatus("alltime")} className="btn btn-primary">all</button>
+          <br/><br/>
+          <h2>{`${this.state.curentstatus} rank table`}</h2>
         <CamperTable data={this.state[this.state.curentstatus]}/>
       </div>
     );
