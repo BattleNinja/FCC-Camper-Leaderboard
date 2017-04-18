@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import CamperTable from "./table"
 
 export default class App extends Component {
   constructor(){
@@ -30,20 +31,10 @@ export default class App extends Component {
 
 
 
-
-
-
-
-
-
-
-
-
   changstatus(status){
     this.setState({
         curentstatus:status
     });
-    console.log(this.state.alltime)
   }
 
   render() {
@@ -52,7 +43,7 @@ export default class App extends Component {
         <h1>Camper Board List</h1>
         <button onClick={()=>this.changstatus("recent")} className="btn btn-primary">30days</button>
         <button onClick={()=>this.changstatus("alltime")} className="btn btn-primary">all</button>
-
+        <CamperTable data={this.state[this.state.curentstatus]}/>
       </div>
     );
   }
