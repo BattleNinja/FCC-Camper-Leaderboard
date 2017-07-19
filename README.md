@@ -1,25 +1,16 @@
-# ReduxSimpleStarter
+FCC project: Build a Camper Leaderboard
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+User Story:
+1: I can see a table of the freeCodeCamp campers who've earned the most brownie points in the past 30 days.
 
-### Getting Started
+2: I can see how many brownie points they've earned in the past 30 days, and how many they've earned total.
 
-There are two methods for getting started with this repo.
+3: I can toggle between sorting the list by how many brownie points they've earned in the past 30 days and by how many brownie points they've earned total.
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+Front-end:React.
 
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
+Data-fetch tool:axios.
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+compress tool: webpack.
 
-```
-> npm install
-> npm start
-```
+Test tool: mocha.

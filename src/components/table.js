@@ -1,7 +1,6 @@
 import React from 'react';
 
 const CamperTable = ({data}) => {
-
     const Output = data.map((person,index)=>{
         return <List key={index} number = {index+1} person = {person} />
     });
@@ -22,7 +21,6 @@ const CamperTable = ({data}) => {
             </table>
         </div>);
 };
-
 
 
 export default CamperTable;

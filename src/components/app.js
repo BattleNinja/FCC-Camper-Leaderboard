@@ -30,8 +30,6 @@ export default class App extends Component {
   }
 
 
-
-
   changstatus(status){
     this.setState({
         curentstatus:status
